@@ -48,36 +48,15 @@
 ├── README.md                 # プロジェクト説明
 ├── .claude/                  # Claude Code 設定
 │   ├── commands/             # スラッシュコマンド
-│   ├── skills/               # Agent Skills
+│   ├── settings.json         # Hooks 設定
 │   └── subagents/            # サブエージェント定義
 ├── src/                      # Python ソースコード
-│   └── ...
 ├── tests/                    # テストコード
-│   └── ...
 ├── terraform/                # Terraform コード
 │   ├── modules/              # 再利用可能なモジュール
 │   └── environments/         # 環境別設定
-│       ├── dev/
-│       ├── staging/
-│       └── prod/
 └── pyproject.toml            # Python プロジェクト設定
 ```
-
-## 開発ワークフロー
-
-### Python 開発
-1. `uv sync` で依存関係をインストール
-2. `ruff check --fix .` でリント＆自動修正
-3. `ruff format .` でフォーマット
-4. `mypy .` で型チェック
-5. `pytest` でテスト実行
-
-### Terraform 開発
-1. `terraform fmt -recursive` でフォーマット
-2. `terraform validate` で構文検証
-3. `tflint` でリント
-4. `tfsec .` でセキュリティチェック
-5. `terraform plan` で変更確認
 
 ## Git ルール
 
@@ -113,3 +92,8 @@
 スラッシュコマンド → ルーティング（何をどの順で呼ぶか）
 サブエージェント   → 実行（どう実装・検証するか）
 ```
+
+### 自動化の提案
+
+同じ作業を3回以上繰り返した場合は、スラッシュコマンド化を提案すること。
+提案時には `.claude/commands/` に追加する具体的なコマンドファイルの内容も提示する。
