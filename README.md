@@ -103,3 +103,10 @@ terraform plan
 # エラー自動修正
 > /fix-all
 ```
+
+## 参考リンク
+
+この環境構築は以下の記事を参考にしています：
+
+- [Claude Code の Agent Skills と Subagent の違いを理解する](https://zenn.dev/mkj/articles/868e0723efa060)
+- [Claude Code の Agent Skills についての理解と実践](https://syu-m-5151.hatenablog.com/entry/2025/12/19/173309)
