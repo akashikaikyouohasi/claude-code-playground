@@ -1,4 +1,36 @@
 {
+  "permissions": {
+    "allow": [
+      "Bash(ls:*)",
+      "Bash(cat:*)",
+      "Bash(head:*)",
+      "Bash(tail:*)",
+      "Bash(wc:*)",
+      "Bash(pwd:*)",
+      "Bash(which:*)",
+      "Bash(whoami:*)",
+      "Bash(date:*)",
+      "Bash(echo:*)",
+      "Bash(git status:*)",
+      "Bash(git log:*)",
+      "Bash(git diff:*)",
+      "Bash(git branch:*)",
+      "Bash(git show:*)",
+      "Bash(git rev-parse:*)",
+      "Bash(uv run pytest:*)",
+      "Bash(uv run python:*)",
+      "Bash(uvx ruff check:*)",
+      "Bash(uvx ruff format:*)",
+      "Bash(uvx mypy:*)",
+      "Bash(uvx bandit:*)",
+      "Bash(terraform fmt:*)",
+      "Bash(terraform validate:*)",
+      "Bash(terraform plan:*)",
+      "Bash(tflint:*)",
+      "Bash(tfsec:*)",
+      "Bash(uvx checkov:*)"
+    ]
+  },
   "hooks": {
     "PostToolUse": [
       {
